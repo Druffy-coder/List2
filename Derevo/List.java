@@ -199,6 +199,7 @@ public class List<T> implements Collection<T> {
         }
         return null;
     }
+
     public void swap(int firstPos, int secondPos) {
         if (firstPos > secondPos) {
             int a;
@@ -238,14 +239,26 @@ public class List<T> implements Collection<T> {
             }
         }
     }
-
-
-
-
-
-
-
-
+    public void sort() {
+        Node<T> a;
+        Node<T> b;
+        boolean flag = true;
+        while (flag) {
+            int count = 0;
+            for (int i = 1; i <= this.counter - 1; i++) {
+                a = indexAt(i - 1);
+                b = indexAt(i);
+                if (comp.compare(a, b) > 0) {
+                    swap(i - 1, i);
+                    count++;
+                }
+            }
+            if (count == 0) {
+                flag = false;
+            }
+        }
+    }
+}
 }
 
 
