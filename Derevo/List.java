@@ -32,6 +32,16 @@ public class List<T> implements Collection<T> {
             this.next = next;
         }
 
+        public boolean hasNext() {
+            if (this.next != null) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
     }
 }
 
