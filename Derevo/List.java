@@ -55,12 +55,38 @@ public class List<T> implements Collection<T> {
         this.counter = 0;
         this.comp = comp;
     }
-
-
-
-
-
+    public MyList() {
+        this.begin = null;
+        this.counter = 0;
     }
+
+    public String toString() {
+        String result = "[ ";
+        if (this.begin == null) {
+            return null;
+        }
+        else {
+            Node<T> iter = this.begin;
+            while (iter.hasNext()) {
+                result += iter.toString() + ", ";
+                iter = iter.getNext();
+            }
+            result += iter.toString();
+        }
+        result += " ]";
+        return result;
+    }
+
+    public long getCounter() {
+        return counter;
+    }
+
+
+
+
+
+
+}
 }
 
 
