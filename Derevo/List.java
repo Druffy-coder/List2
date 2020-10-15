@@ -40,6 +40,24 @@ public class List<T> implements Collection<T> {
                 return false;
             }
         }
+        @Override
+        public String toString() {
+            return value.toString();
+        }
+    }
+
+    private Node<T> begin;
+    private long counter;
+    private Comparable comp;
+
+    public MyList(Comparable comp) {
+        this.begin = null;
+        this.counter = 0;
+        this.comp = comp;
+    }
+
+
+
 
 
     }
