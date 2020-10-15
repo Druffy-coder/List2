@@ -259,7 +259,11 @@ public class List<T> implements Collection<T> {
         }
     }
 }
+
+interface Comparable {
+    int compare(MyList.Node a, MyList.Node b);
 }
+
 
 
 
